@@ -1,0 +1,19 @@
+version: '3'
+
+tasks:
+
+  default:
+    deps: [main]
+
+  main:
+    cmds:
+     - zig build run
+     
+  init:
+    cmds:
+      - git submodule update --init --recursive
+
+  clear:
+    aliases: ["c"]
+    cmds:
+     - rm -rf .zig-cache
