@@ -8,12 +8,9 @@ tasks:
   main:
     cmds:
      - zig build run
-     
-  init:
-    cmds:
-      - git submodule update --init --recursive
 
   clear:
     aliases: ["c"]
     cmds:
      - rm -rf .zig-cache
+     - rm -rf zig-out
